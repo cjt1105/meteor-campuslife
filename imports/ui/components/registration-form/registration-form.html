@@ -1,0 +1,81 @@
+<template name="registration">
+        <div class="ui center aligned grid">
+                <div class="ui one column grid centered register-card">
+                    <form class="ui form add-student">
+                            <h1 class="ui horizontal divider">
+                                Sign up
+                            </h1>
+                            <div class="three fields">
+                                <div class="field">
+                                    <input name="firstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="field">
+                                    <input name="lastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="field">
+                                    <input name="email" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="two fields">
+                                <div class="field">
+                                    <input name="password1" type="text" placeholder="Password">
+                                </div>
+                                <div class="field">
+                                    <input name="password2" type="text" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                            <div class="two fields">
+                                <div class="field">
+                                    <select name="year" class="ui fluid dropdown">
+                                        <option value="">Year</option>
+                                        <option value="Freshman">Freshman</option>
+                                        <option value="Sophmore">Sophmore</option>
+                                        <option value="Junior">Junior</option>
+                                        <option value="Senior">Senior</option>
+                                        <option value="Super Senior">Super Senior</option>
+                                        <option value="Grad Student">Grad Student</option>
+                                    </select>
+                                </div>
+                                <div name="college" class="field">
+                                    <div class="ui search">
+                                        <input name="college" class="prompt" type="text" placeholder="What college do you attend?">
+                                        <div class="results"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="ui horizontal divider">
+                                    I am a
+                            </h1>
+                            <div class="three fields">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="undergrad">
+                                        <label>Undergrad</label>
+                                    </div>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="gradStudent">
+                                        <label>Grad Student</label>
+                                    </div>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="teachersAssistant">
+                                        <label>Teachers Assistant</label>
+                                    </div>
+                            </div>
+                            <div class="three fields">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="residentAssistant" onchecked={}>
+                                        <label>Resident Assistant</label>
+                                    </div>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="fraternityMember">
+                                        <label>Fratenity Member</label>
+                                    </div>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="sororityMember">
+                                        <label>Sorority Member</label>
+                                    </div>
+                            </div>
+                            <button type="submit" class="ui button submit" tabindex="0">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+</template>
