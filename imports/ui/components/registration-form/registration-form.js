@@ -51,10 +51,11 @@ Template.registration.events({
             residenceAdded: false
         };
         const user = {..._user, ...state}
-        Meteor.call('registerStudent', user, collegeId, (err, data) => {
-            Session.set('token', data.token);
-            Session.set('currentUser', data.user);
-            FlowRouter.redirect(`/${collegeId}/dashboard/${data.user.id}`)
-        });
+        Meteor.neo4j.call('registerUser', {user: user, collegeId: collegeId})
+        // Meteor.call('registerStudent', user, collegeId, (err, data) => {
+        //     Session.set('token', data.token);
+        //     Session.set('currentUser', data.user);
+        //     FlowRouter.redirect(`/${collegeId}/dashboard/${data.user.id}`)
+        // });
     }
 });
